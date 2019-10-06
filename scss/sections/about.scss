@@ -6,10 +6,24 @@
   &__item {
     position: relative;
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 95px;
+    align-items: start;
+    justify-content: center;
 
     &:before {
       flex: 1 0 0;
+      content: "";
+    }
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      width: 2px;
+      height: 220px;
+      margin: auto;
+      background-color: #f1f1f1;
       content: "";
     }
 
@@ -24,16 +38,40 @@
         text-align: right;
       }
     }
+
+    &:last-of-type {
+      &:after,
+      &:before {
+        display: none;
+      }
+    }
   }
 
   &__icon {
+    position: relative;
     flex: 0 0 168px;
     border: 7px solid #f1f1f1;
     border-radius: 50%;
     font-size: 0;
+    z-index: 5;
 
     img {
       max-width: 100%;
+    }
+
+    &--btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 168px;
+      background-color: #f2d048;
+      color: #ffffff;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      text-decoration: none;
     }
   }
 
